@@ -1,94 +1,57 @@
-# Yukina
+# Dranbe 
 
-Simple and Elegant Astro Blog Template
+简单优雅的 Astro 博客模板
 
-![Preview](https://s2.loli.net/2025/01/26/S4URrsj9TFgOKAp.webp)
+![Preview](https://astro-blog-henna-chi.vercel.app/)
 
-[中文](https://github.com/WhitePaper233/yukina/blob/main/README_zh.md)
 
-## Demo Preview Links
 
-[🖥️ Live Demo (Vercel)](https://yukina-blog.vercel.app) |
-[🖥️ WhitePaper233's Blog (possibly not the latest version)](https://whitepaper233.top/)
+## 🛠️ 构建指南
 
-## 🛠️ Build Guide
+### 1. 安装 Node.js 22 以上版本
 
-### 1. Install Node.js version 22 or above
+前往 [Node.js 官网](https://nodejs.org/) 下载并安装最新版本的 Node.js。
 
-Go to the [Node.js official website](https://nodejs.org/) to download and install the latest version of Node.js.
-
-### 2. Enable Corepack
+### 2. 启用 Corepack
 
 ```bash
 corepack enable
 ```
 
-### 3. Install pnpm
+### 3. 安装 pnpm 或以上版本
 
 ```bash
 corepack enable pnpm
 ```
 
-### 4. Install Dependencies
+### 4. 安装依赖
 
 ```bash
 pnpm install
 ```
 
-### 5. Build Search Index
+### 5. 构建搜索索引
 
 ```bash
 pnpm build
 ```
 
-### 6. Start Development Server
+### 6. 启动开发服务器
 
 ```bash
 pnpm dev
 ```
 
-### 7. Build Project
+### 7. 构建项目
 
 ```bash
 pnpm build
 ```
 
-### 8. Preview Project
+### 8. 预览项目
 
 ```bash
 pnpm preview
 ```
 
-## 🗺️ Roadmap
 
-### Recent
-
-✅ - Completed | 🧪 - In Testing | 🚧 - In Progress | ⏳ - Planned
-
-| Status | Project                                             |
-| ------ | --------------------------------------------------- |
-| 🧪     | Basic feature implementation                        |
-| 🧪     | Refactoring some code, optimizing overall structure |
-| 🧪     | Optimizing animation effects                        |
-| 🧪     | Mobile adaptation                                   |
-| 🚧     | Optimizing website performance                      |
-| 🧪     | Adjustable colors                                   |
-| 🧪     | Adding RSS, SiteMap, and other features             |
-| 🧪     | More build options (e.g., SLUG generation methods)  |
-| ⏳     | Adding Live2D character                             |
-| 🧪     | Search functionality                                |
-| 🧪     | i18n                                                |
-
-### Long-term
-
-| Status | Project                                        |
-| ------ | ---------------------------------------------- |
-| ⏳     | Developing an easy-to-manage CLI and small CMS |
-| ⏳     | Slidev components                              |
-| ⏳     | More Markdown components                       |
-
-## 🙏 Special Thanks
-
-- [Hexo Shoka Theme](https://github.com/amehime/hexo-theme-shoka) for providing design ideas
-
-- [Astro Fuwari Template](https://github.com/saicaca/fuwari) for providing the main design ideas and some code implementations
