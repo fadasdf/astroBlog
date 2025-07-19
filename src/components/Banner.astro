@@ -1,5 +1,5 @@
 ---
-import YukinaConfig from "../../yukina.config";
+import DranbeConfig from "../../dranbe.config";
 import { GetCoverURLForUnspecifiedEntry } from "../utils/cover";
 
 export interface Props {
@@ -13,7 +13,7 @@ const { title, subTitle, bannerImage, slug } = Astro.props;
 const hasTitle = title !== undefined || subTitle !== undefined;
 const hasHeaderImg = bannerImage !== undefined || slug !== undefined;
 
-let carouselImgsList = YukinaConfig.banners;
+let carouselImgsList = DranbeConfig.banners;
 const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
 ---
 
@@ -54,9 +54,9 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
             class:list={[hasTitle ? "title-normal" : "title-index"]}
             class="title"
           >
-            {title ?? YukinaConfig.title}
+            {title ?? DranbeConfig.title}
           </h1>
-          <h2 class="subtitle">{subTitle ?? YukinaConfig.subTitle}</h2>
+          <h2 class="subtitle">{subTitle ?? DranbeConfig.subTitle}</h2>
         </div>
       </div>
     </div>

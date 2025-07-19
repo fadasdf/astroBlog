@@ -1,5 +1,5 @@
 ---
-import YukinaConfig from "../../yukina.config";
+import DranbeConfig from "../../dranbe.config";
 import GlobalStyles from "./GlobalStyles.astro";
 import ScriptSetup from "./ScriptSetup.astro";
 
@@ -16,29 +16,29 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{YukinaConfig.title}</title>
-<meta name="title" content={YukinaConfig.title} />
-<meta name="description" content={YukinaConfig.description} />
+<title>{DranbeConfig.title}</title>
+<meta name="title" content={DranbeConfig.title} />
+<meta name="description" content={DranbeConfig.description} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={YukinaConfig.title} />
-<meta property="og:description" content={YukinaConfig.description} />
+<meta property="og:title" content={DranbeConfig.title} />
+<meta property="og:description" content={DranbeConfig.description} />
 <!-- <meta property="og:image" content={new URL(image, Astro.url)} /> -->
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={YukinaConfig.title} />
-<meta property="twitter:description" content={YukinaConfig.description} />
+<meta property="twitter:title" content={DranbeConfig.title} />
+<meta property="twitter:description" content={DranbeConfig.description} />
 <!-- <meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
 
 <!-- RSS AutoDiscovery -->
 <link
   rel="alternate"
   type="application/rss+xml"
-  title={YukinaConfig.title}
+  title={DranbeConfig.title}
   href={new URL("rss.xml", Astro.site)}
 />
 

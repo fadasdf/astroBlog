@@ -5,7 +5,7 @@ import PostCardInfoIcon from "./widgets/PostCardInfoIcon.astro";
 import { GetCoverURLForUnspecifiedEntry } from "../utils/cover";
 import { i18n } from "../locales/translation";
 import I18nKeys from "../locales/keys";
-import YukinaConfig from "../../yukina.config";
+import DranbeConfig from "../../dranbe.config";
 import { formatDate } from "../utils/date";
 
 export interface Props {
@@ -44,7 +44,7 @@ const { time, wordCount } = props.readingMetadata;
         >
           <Icon name="cuida:calendar-outline" />
           <span class="select-none">
-            {formatDate(props.published, YukinaConfig.locale)}
+            {formatDate(props.published, DranbeConfig.locale)}
           </span>
         </div>
         {
@@ -82,7 +82,7 @@ const { time, wordCount } = props.readingMetadata;
           <li class="data space-x-2">
             <PostCardInfoIcon name="cuida:calendar-outline" />
             <span class="select-none">
-              {formatDate(props.published, YukinaConfig.locale)}
+              {formatDate(props.published, DranbeConfig.locale)}
             </span>
           </li>
           {

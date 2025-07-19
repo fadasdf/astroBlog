@@ -1,5 +1,5 @@
 ---
-import YukinaConfig from "../../yukina.config";
+import DranbeConfig from "../../dranbe.config";
 import { i18n } from "../locales/translation";
 
 import { Icon } from "astro-icon/components";
@@ -7,7 +7,7 @@ import SearchBar from "./SearchBar.svelte";
 import MobileSearchBar from "./MobileSearchBar.svelte";
 import "astro-pagefind";
 
-const navCount = YukinaConfig.navigators.length;
+const navCount = DranbeConfig.navigators.length;
 ---
 
 <nav class="nav" id="nav">
@@ -34,18 +34,18 @@ const navCount = YukinaConfig.navigators.length;
         />
       </button>
       <a class="title" href="/">
-        {YukinaConfig.brandTitle}
+        {DranbeConfig.brandTitle}
       </a>
     </div>
     <a class="brand-lg" href="/">
       <div class="title space-x-2">
         <Icon name="heroicons:home" size={32} />
-        <p>{YukinaConfig.brandTitle}</p>
+        <p>{DranbeConfig.brandTitle}</p>
       </div>
     </a>
     <div class="menu">
       {
-        YukinaConfig.navigators.map((nav) => (
+        DranbeConfig.navigators.map((nav) => (
           <a href={nav.href}>
             <p>{i18n(nav.nameKey)}</p>
           </a>
@@ -83,7 +83,7 @@ const navCount = YukinaConfig.navigators.length;
       class="mobile-menu-nav mobile-menu-nav-closed flex flex-col space-y-6 overflow-hidden text-xl font-medium text-[var(--text-color)] transition-all duration-300"
     >
       {
-        YukinaConfig.navigators.map((nav) => (
+        DranbeConfig.navigators.map((nav) => (
           <li class="mt-1">
             <a href={nav.href} class="mobile-nav-item">
               <div class="flex flex-row items-center space-x-2">

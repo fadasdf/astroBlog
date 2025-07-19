@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import YukinaConfig from "../../../yukina.config";
+import DranbeConfig from "../../../dranbe.config";
 import I18nKeys from "../../locales/keys";
 import { i18n } from "../../locales/translation";
 import { formatDate } from "../../utils/date";
@@ -41,7 +41,7 @@ const { title, published, license, author, sourceLink } = Astro.props;
         <p
           class="!my-0 line-clamp-1 text-sm text-[var(--text-color)] lg:text-base"
         >
-          {author ?? YukinaConfig.username}
+          {author ?? DranbeConfig.username}
         </p>
       </div>
       <div class="flex flex-col">
@@ -51,7 +51,7 @@ const { title, published, license, author, sourceLink } = Astro.props;
         <p
           class="!my-0 line-clamp-1 text-sm text-[var(--text-color)] lg:text-base"
         >
-          {formatDate(published, YukinaConfig.locale)}
+          {formatDate(published, DranbeConfig.locale)}
         </p>
       </div>
       <div class="flex flex-col">
@@ -82,10 +82,10 @@ const { title, published, license, author, sourceLink } = Astro.props;
           !license && (
             <a
               class="line-clamp-1 text-sm text-[var(--text-color)] lg:text-base"
-              href={YukinaConfig.license.url}
+              href={DranbeConfig.license.url}
               target="_blank"
             >
-              {YukinaConfig.license.name}
+              {DranbeConfig.license.name}
             </a>
           )
         }

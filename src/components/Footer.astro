@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import YukinaConfig from "../../yukina.config";
+import DranbeConfig from "../../dranbe.config";
 import { i18n } from "../locales/translation";
 import I18nKeys from "../locales/keys";
 import { GetCategories, GetTags } from "../utils/content";
@@ -19,7 +19,7 @@ const tagKeys = [...tags.keys()];
       <a href="/about" class="relative h-40 w-40 md:hidden">
         <img
           class="lozad absolute left-0 top-0 h-40 rounded-l-3xl"
-          data-src={YukinaConfig.avatarUrl}
+          data-src={DranbeConfig.avatarUrl}
           alt="Avatar"
         />
         <div
@@ -32,7 +32,7 @@ const tagKeys = [...tags.keys()];
       >
         <img
           class="lozad h-40 rounded-3xl"
-          data-src={YukinaConfig.avatarUrl}
+          data-src={DranbeConfig.avatarUrl}
           alt="Avatar"
         />
       </a>
@@ -42,17 +42,17 @@ const tagKeys = [...tags.keys()];
             href="/about"
             class="line-clamp-1 text-xl font-semibold text-[var(--text-color)]"
           >
-            {YukinaConfig.username}
+            {DranbeConfig.username}
           </a>
           <span class="mb-2 mt-1 h-1 w-8 rounded-full bg-[var(--primary-color)]"
           ></span>
           <p class="line-clamp-1 text-[var(--text-color-lighten)]">
-            {YukinaConfig.sign}
+            {DranbeConfig.sign}
           </p>
         </div>
         <ul class="flex flex-row items-center justify-center space-x-6">
           {
-            YukinaConfig.socialLinks.map((item) => (
+            DranbeConfig.socialLinks.map((item) => (
               <li>
                 <a href={item.link} class="text-[var(--primary-color)]">
                   <Icon name={item.icon} size={24} />
@@ -76,7 +76,7 @@ const tagKeys = [...tags.keys()];
     <div class="relative grid grid-cols-2 gap-1 md:grid-cols-3">
       {
         categoryKeys
-          .slice(0, YukinaConfig.maxFooterCategoryChip)
+          .slice(0, DranbeConfig.maxFooterCategoryChip)
           .map((category) => (
             <a
               href={`/categories/${category}`}
@@ -92,22 +92,22 @@ const tagKeys = [...tags.keys()];
           ))
       }
       {
-        categoryKeys.length > YukinaConfig.maxFooterCategoryChip && (
+        categoryKeys.length > DranbeConfig.maxFooterCategoryChip && (
           <a
-            href={`/categories/${categoryKeys[YukinaConfig.maxFooterCategoryChip]}`}
+            href={`/categories/${categoryKeys[DranbeConfig.maxFooterCategoryChip]}`}
             class="category col-span-2 flex flex-row items-center justify-between rounded-lg px-2 py-1.5 transition-all hover:bg-[var(--primary-color-lighten)] md:col-span-3"
           >
             <p class="line-clamp-1 text-[var(--text-color)] transition-all">
               {
                 categories.get(
-                  categoryKeys[YukinaConfig.maxFooterCategoryChip],
+                  categoryKeys[DranbeConfig.maxFooterCategoryChip],
                 )!.name
               }
             </p>
             <span class="rounded-md bg-[var(--primary-color-lighten)] px-2.5 py-0.5 text-[var(--primary-color)]">
               {
                 categories.get(
-                  categoryKeys[YukinaConfig.maxFooterCategoryChip],
+                  categoryKeys[DranbeConfig.maxFooterCategoryChip],
                 )!.posts.length
               }
             </span>
@@ -136,7 +136,7 @@ const tagKeys = [...tags.keys()];
     </div>
     <div class="relative flex flex-row flex-wrap">
       {
-        tagKeys.slice(0, YukinaConfig.maxFooterTagChip + 1).map((tag) => (
+        tagKeys.slice(0, DranbeConfig.maxFooterTagChip + 1).map((tag) => (
           <a
             href={`/tags/${tag}`}
             class="tag m-1 rounded-md bg-[var(--primary-color-lighten)] px-2 py-1 transition-all hover:brightness-95"
@@ -148,7 +148,7 @@ const tagKeys = [...tags.keys()];
         ))
       }
       {
-        tagKeys.length >= YukinaConfig.maxFooterCategoryChip + 1 && (
+        tagKeys.length >= DranbeConfig.maxFooterCategoryChip + 1 && (
           <div class="absolute bottom-0 flex h-10 w-full flex-row items-center justify-center bg-gradient-to-t from-[var(--card-color)] from-25% to-transparent backdrop-blur-sm">
             <a
               href="/tags/"
@@ -176,16 +176,16 @@ const tagKeys = [...tags.keys()];
     >
       <p>
         © {new Date().getFullYear()}
-        {YukinaConfig.username} All Rights Reserved.
+        {DranbeConfig.username} All Rights Reserved.
       </p>
       <p>
         Powered By <a
           class="link"
-          href="https://github.com/WhitePaper233/yukina">Yukina</a
+          href="https://github.com/WhitePaper233/dranbe">Yukina</a
         > & <a class="link" href="https://astro.build/">Astro</a>
       </p>
       <p>
-        <a class="link" href={new URL("sitemap-index.xml", YukinaConfig.site)}
+        <a class="link" href={new URL("sitemap-index.xml", DranbeConfig.site)}
           >SiteMap</a
         > / <a class="link" href="/rss.xml">RSS</a>
       </p>

@@ -1,14 +1,14 @@
 import I18nKeys from "./src/locales/keys";
 import type { Configuration } from "./src/types/config";
 
-const YukinaConfig: Configuration = {
+const DranbeConfig: Configuration = {
   title: "Dranbe",
   subTitle: "Dranbe Template Demo Site",
   brandTitle: "Dranbe",
 
   description: "Demo Site",
 
-  site: "https://yukina-blog.vercel.app",
+  site: "https://dranbe-blog.vercel.app",
 
   locale: "en", // set for website language and date format
 
@@ -71,4 +71,4 @@ const YukinaConfig: Configuration = {
   bannerStyle: "LOOP", // 'loop' | 'static' | 'hidden'
 };
 
-export default YukinaConfig;
+export default DranbeConfig;

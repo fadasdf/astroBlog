@@ -1,6 +1,6 @@
 ---
 import { formatDate } from "../../utils/date";
-import YukinaConfig from "../../../yukina.config";
+import DranbeConfig from "../../../dranbe.config";
 
 export interface Props {
   id: string;
@@ -20,7 +20,7 @@ const { id, title, pubilished } = Astro.props;
     <div class="flex w-[15%] flex-row justify-end md:w-[10%]">
       <p class="date text-sm text-[var(--text-color-lighten)]">
         {
-          formatDate(pubilished, YukinaConfig.locale, {
+          formatDate(pubilished, DranbeConfig.locale, {
             month: "2-digit",
             day: "2-digit",
           })

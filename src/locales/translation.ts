@@ -1,4 +1,4 @@
-import YukinaConfig from "../../yukina.config";
+import DranbeConfig from "../../dranbe.config";
 import type I18nKeys from "./keys";
 import { en } from "./languages/en";
 import { zh_CN } from "./languages/zh_cn";
@@ -17,7 +17,7 @@ export function getTranslation(lang: string): Translation {
 }
 
 export function i18n(key: I18nKeys, ...interpolations: string[]): string {
-  const lang = YukinaConfig.locale;
+  const lang = DranbeConfig.locale;
   let translation = getTranslation(lang)[key];
   interpolations.forEach((interpolation) => {
     translation = translation.replace("{{}}", interpolation);
